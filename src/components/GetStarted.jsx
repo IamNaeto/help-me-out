@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const GetStarted = () => {
   return (
-    <main className="relative top-15 w-full flex items-center justify-center pt-10">
+    <main className="relative top-10 w-full flex items-center justify-center pt-10">
       <section className="grid grid-cols-1 place-items-center gap-2 w-30%">
         <h1 className="text-8 text-brand-dark text-center">Log in or Sign up</h1>
         <p className="text-4 text-center text-brand-litedark mb-4 w-80%">Join millions of others in sharing successful moves on HelpMeOut.</p>
@@ -27,7 +28,7 @@ const GetStarted = () => {
             <input type="password" placeholder="Enter your Password" />
           </label>
 
-          <button className="p-2.5 border-solid border-brand-blue rounded-md bg-brand-blue text-4 text-brand-white cursor-pointer hover-bg-brand-bluedark transition-all">Sign Up</button>
+          <Link to="/VideosRepo" className="p-2.5 border-solid border-brand-blue rounded-md bg-brand-blue text-4 text-brand-white text-center decoration-none cursor-pointer hover-bg-brand-bluedark transition-all">Sign Up</Link>
         </form>
       </section>
     </main>

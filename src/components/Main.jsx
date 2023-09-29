@@ -22,12 +22,12 @@ const Main = () => {
                     </div>
                     <div className="relative">
                         <img src="./img/Frame3.png" alt="" className="w-full relative z-2"/>
-                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-4 top--10"/>
+                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-14 top--10 w-full"/>
                     </div>
                 </div>
             </section>
 
-            <section className="bg-brand-white px-5% py-4 my-8">
+            <section className="bg-brand-white px-5% py-15 my-8" id="Features">
                 <h1 className="text-8 text-brand-dark text-center mt-10 mb-2">Features</h1>
                 <p className="text-4.5 text-center text-brand-litedark mb-8">Key Highlights of Our Extension</p>
 
@@ -62,7 +62,7 @@ const Main = () => {
                 </div>
             </section>
 
-            <section className="bg-brand-white px-5% py-4 my-8">
+            <section className="bg-brand-white px-5% py-15 my-8" id="HowItWorks">
                 <h1 className="text-8 text-brand-dark text-center mt-10 mb-8">How it works</h1>
 
                 <div className="grid grid-cols-3 place-items-center">
