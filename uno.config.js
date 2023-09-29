@@ -20,6 +20,7 @@ import {
               litedark: "#616163",
               blue: "#120B48",
               grey: "#F4F6F8",
+              litegrey: "#B9C2C8",
               white: "#fff",
             },
           },
