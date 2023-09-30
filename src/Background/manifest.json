@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Screen Recording Extension",
+    "version": "1.0",
+    "description": "A screen recording extension",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_start"
+      }
+    ],
+    "action": {
+      "default_popup": "popup/Popup.html",
+      "default_icon": {
+        "16": "./img/HMOicon.png",
+        "48": "./img/HMOicon.png",
+        "128": "./img/HMOicon.png"
+      }
+    },
+    "icons": {
+      "16": "./img/HMOicon.png",
+      "48": "./img/HMOicon.png",
+      "128": "./img/HMOicon.png"
+    }
+  }
+  

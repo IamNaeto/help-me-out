@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Popup Page",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "tabCapture",
+        "audioCapture",
+        "storage"
+      ],
+    "action": {
+      "default_popup": "Popup.html",
+      "default_icon": {
+        "16": "./img/HMOicon.png",
+        "48": "./img/HMOicon.png",
+        "128": "./img/HMOicon.png"
+      }
+    },
+    "icons": {
+      "16": "./img/HMOicon.png",
+      "48": "./img/HMOicon.png",
+      "128": "./img/HMOicon.png"
+    }
+  }
+  

@@ -6,3 +6,11 @@
   font-family: 'Sora', sans-serif;
   /* border: 2px solid red; */
 }
+
+.icon-toggle {
+  transition: transform 0.3s ease; /* You can adjust the duration and easing as needed */
+}
+
+.icon-off {
+  transform: rotate(180deg); /* Rotate the icon when it's off */
+}
