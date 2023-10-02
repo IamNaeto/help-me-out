@@ -1,7 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom"
+import React, { useState } from 'react';
+import  { Link } from 'react-router-dom'
 
 const Record = () => {
+    const [isSectionVisible, setIsSectionVisible] = useState(false);
+
+  // Function to show the section
+  const showSection = () => {
+    setIsSectionVisible(true);
+  };
+
+  // Function to hide the section
+  const hideSection = () => {
+    setIsSectionVisible(false);
+  };
+
     return (
        <main>
         <section className="w-full grid grid-cols-2 gap-4 relative top-10 px-5% py-8%">
@@ -14,7 +26,7 @@ const Record = () => {
                 </div>
                 <div className="w-95% relative mb-5">
                     <input type="email" placeholder="enter email of receiver" className="relative py-4 pl-4 pr-10 bg-brand-grey rounded-md border-none outline-none w-full"/> 
-                    <Link to="/RecordReady" className="absolute right-3 top-2 decoration-none p-2 rounded-md bg-#605C84 border-none outline-none text-4 text-brand-white cursor-pointer">Send</Link>
+                    <button className="absolute right-3 top-2 decoration-none p-2 rounded-md bg-#605C84 border-none outline-none text-4 text-brand-white cursor-pointer" onClick={showSection}>Send</button>
                 </div>
 
                 <p className="font-600 mb-2">Video Url</p>
@@ -85,13 +97,13 @@ const Record = () => {
         <section className="px-5% py-5% flex flex-col items-center text-center bg-brand-grey mb-15 w-full">
                 <h3>To ensure the availability and privacy of your video,  <br /> we recommend saving it to your account.</h3>
                 <button className="py-3 px-4 bg-brand-blue text-brand-white text-4 rounded-md border-solid border-brand-blue outline-none my-5 cursor-pointer">Save Video</button>
-                <h3 className="text-brand-litedark">Don’t have an account? <a href="" className="text-brand-blue">Create account</a> </h3>
+                <h3 className="text-brand-litedark">Don’t have an account? <Link to="/Auth" className="text-brand-blue">Create account</Link> </h3>
         </section>
-
-        <section className="absolute top-60 left-30% w-30% bg-#F2F4F7 p-3% mb-10 rounded-md shadow-md shadow-brand-litedark">
+        {isSectionVisible && (
+        <section className="absolute top-30 left-30% w-30% bg-#F2F4F7 p-3% mb-10 rounded-md shadow-md shadow-brand-litedark">
 
             <div className="flex items-end justify-end"> 
-                <span className="py-1 px-2.5 rounded-20 border-solid border-1.5 border-brand-litedark cursor-pointer">x</span>
+                <span className="closebtn py-1 px-2.5 rounded-20 border-solid border-1.5 border-brand-litedark cursor-pointer" onClick={hideSection}>x</span>
             </div>
 
             <div className="mb-20 flex flex-col items-center justify-center text-center">
@@ -104,10 +116,10 @@ const Record = () => {
             <div className="flex flex-col items-center justify-center text-center">
                 <p>Would you need to view this video later? Save to your account now!</p>
                 <button className="py-3 px-4 decoration-none  bg-brand-blue text-brand-white text-4 rounded-md border-solid border-brand-blue outline-none my-8 cursor-pointer">Save Video</button>
-                <p className="text-brand-litedark">Don’t have an account? <a href="" className="text-brand-blue">Create account</a> </p>
+                <p className="text-brand-litedark">Don’t have an account? <Link to="/Auth" className="text-brand-blue">Create account</Link> </p>
             </div>
         </section>
-
+        )}
     </main>
      );
 }
