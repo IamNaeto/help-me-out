@@ -8,11 +8,12 @@ const Header = () => {
   const isAuthRoute = location.pathname === "/Auth";
   const isVideosRepoRoute = location.pathname === "/VideosRepo";
   const isVideoRepoRoute = location.pathname === "/VideoRepo";
+  const isRecordReady = location.pathname === "/RecordReady";
 
   return (
     <nav
       className={`py-5 px-5% flex items-center justify-between bg-brand-white fixed w-full z-5 ${
-        isAuthRoute || isVideosRepoRoute || isVideoRepoRoute ? "" : "shadow-md"
+        isAuthRoute || isVideosRepoRoute || isVideoRepoRoute || isRecordReady ? "" : "shadow-md"
       }`}
     >
       <Link to="/">

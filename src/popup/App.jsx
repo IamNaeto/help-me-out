@@ -4,7 +4,7 @@ import Camera from '../components/Camera';
 import Audio from '../components/Audio';
 import RecordingButton from '../components/RecordingButton';
 import Screens from '../components/Screens';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const App = () => {
     const [showPopout, setShowPopout] = useState(true); // State to manage popout visibility
@@ -12,6 +12,8 @@ const App = () => {
     const [isPaused, setIsPaused] = useState(false);
     const [mediaRecorder, setMediaRecorder] = useState(null);
     const [recordedChunks, setRecordedChunks] = useState([]);
+    const [recordedTime, setRecordedTime] = useState(0); // State to store the recorded time
+    const videoRef = useRef(null);
 
     useEffect(() => {
         if (mediaRecorder) {
@@ -44,6 +46,31 @@ const App = () => {
         }
     }, [mediaRecorder, recordedChunks]);
 
+    useEffect(() => {
+        // Update recorded time every second when recording is active
+        let timerId;
+        if (recordingStatus === "recording") {
+            timerId = setInterval(() => {
+                setRecordedTime((prevTime) => prevTime + 1);
+            }, 1000); // Update every 1000 milliseconds (1 second)
+        } else if (recordingStatus === "stopped") {
+            clearInterval(timerId); // Stop updating when recording is stopped
+        }
+
+        return () => {
+            clearInterval(timerId); // Cleanup the interval when component unmounts
+        };
+    }, [recordingStatus]);
+
+    // Function to format time in HH:MM:SS format
+function formatTime(seconds) {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
     const startRecording = async () => {
         try {
             setShowPopout(false); // Hide the popout
@@ -51,6 +78,11 @@ const App = () => {
 
             // Capture the user's screen and audio
             const stream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
+
+            // Display the user's camera in the FaceCam div
+            if (videoRef.current) {
+                videoRef.current.srcObject = stream;
+            }
 
             // Create a media recorder and start recording
             const recorder = new MediaRecorder(stream);
@@ -83,6 +115,18 @@ const App = () => {
             mediaRecorder.stop();
             setRecordingStatus("stopped");
         }
+
+        // Stop the video element displaying the camera feed
+        if (videoRef.current) {
+            const videoStream = videoRef.current.srcObject;
+            if (videoStream) {
+                const tracks = videoStream.getTracks();
+                tracks.forEach((track) => {
+                    track.stop();
+                });
+            }
+            videoRef.current.srcObject = null;
+        }
     };
 
     const handlePauseResumeClick = () => {
@@ -105,6 +149,7 @@ const App = () => {
         setRecordedChunks([]);
         // Delete recording logic here
     };
+
 
     return (
     <> 
@@ -136,12 +181,13 @@ const App = () => {
 
         ) : (
         <main className="RecordTab flex items-center gap-6 absolute bottom-2 left-2">
-            <div className="p-2 w-30 h-30 rounded-100 bg-brand-litedark">
+            <div className="Facecam p-2 w-30 h-30 rounded-100 shadow-md bg-brand-litedark">
+                <video ref={videoRef} autoPlay playsInline muted className='w-full h-full'></video>
+        </div>
 
-            </div>
             <div className="flex items-center gap-2 p-5 rounded-50 border-solid border-8 border-brand-litegrey bg-brand-dark text-brand-white">
                 <div className="flex items-center gap-2 pr-3 mr-2 border-r-2 border-r-solid border-r-brand-litegrey">
-                    <h3>00:03:45</h3>
+                    <h3 className='RecordTiming'>{formatTime(recordedTime)}</h3>
                     <img src="./img/indicator.png" alt="" />
                 </div>
                 <div className="flex items-center gap-4">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const Record = () => {
     return (
-       <main>  
+       <main>
         <section className="w-full grid grid-cols-2 gap-4 relative top-10 px-5% py-8%">
             <section className="border-r-brand-litegrey border-r-solid border-r-1 pr-4">
                 <h1>Your video is ready!</h1>
@@ -103,7 +103,7 @@ const Record = () => {
 
             <div className="flex flex-col items-center justify-center text-center">
                 <p>Would you need to view this video later? Save to your account now!</p>
-                <Link to="/Screen" className="py-3 px-4 decoration-none  bg-brand-blue text-brand-white text-4 rounded-md border-solid border-brand-blue outline-none my-8 cursor-pointer">Save Video</Link>
+                <button className="py-3 px-4 decoration-none  bg-brand-blue text-brand-white text-4 rounded-md border-solid border-brand-blue outline-none my-8 cursor-pointer">Save Video</button>
                 <p className="text-brand-litedark">Don’t have an account? <a href="" className="text-brand-blue">Create account</a> </p>
             </div>
         </section>

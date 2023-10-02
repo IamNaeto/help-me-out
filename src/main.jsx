@@ -8,8 +8,6 @@ import Auth from './pages/Auth';
 import VideosRepo from './pages/VideosRepo';
 import VideoRepo from './pages/VideoRepo';
 import RecordReady from './pages/RecordReady';
-import App from './popup/App';
-import ScreenRecording from './popup/RecordTab';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,8 +18,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/VideosRepo" element={<VideosRepo />} />
         <Route path="/VideoRepo" element={<VideoRepo />} />
         <Route path="/RecordReady" element={<RecordReady />} />
-        <Route path="/Popup" element={<App />} />
-        <Route path="/Screen" element={<ScreenRecording />} />
       </Routes>
      </Router>
   </React.StrictMode>,
