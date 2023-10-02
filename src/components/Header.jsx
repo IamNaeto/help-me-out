@@ -48,7 +48,7 @@ const Header = () => {
         {!isAuthRoute && !isVideosRepoRoute && !isVideoRepoRoute &&(
         <Link
           to="/Auth"
-          className="decoration-none text-brand-blue text-5 font-600"
+          className="decoration-none text-brand-blue text-5 font-600 p-3 transition-all hover-bg-brand-blue hover-rounded-md hover-text-brand-white"
         >
           Get Started
         </Link>

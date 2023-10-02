@@ -8,7 +8,7 @@ const Main = () => {
                     <h1 className="text-15 text-brand-dark font-700">Show Them <br />
                     Don’t Just Tell</h1>
                     <p className="text-5 font-400 text-brand-dark max-w-">Help your friends and loved ones by creating and sending videos on how to get things done on a website.</p>
-                    <button className="p-3 bg-brand-blue text-brand-white text-4 border border-1 outline-none rounded-1.5 mt-4 flex items-center justify-center cursor-pointer  hover-bg-brand-bluedark transition-all transition-1">Install HelpMeOut <span className="i-mdi-arrow-right-thin inline-block text-5 ml-2"/></button>
+                    <button className="p-3 bg-brand-blue text-brand-white text-4 border border-brand-blue border-solid border-1 outline-none rounded-1.5 mt-4 flex items-center justify-center cursor-pointer hover-shadow-brand-blue shadow-md transition-all transition-1">Install HelpMeOut <span className="i-mdi-arrow-right-thin inline-block text-5 ml-2"/></button>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col items-center justify-between">
