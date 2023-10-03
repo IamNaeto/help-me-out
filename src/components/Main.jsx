@@ -3,11 +3,11 @@ import React from "react";
 const Main = () => {
     return ( 
         <main className="bg-brand-grey relative top-20 z-1">
-            <section className="px-5% py-20 grid grid-cols-2 gap-4 bg-brand-white">
+            <section className="px-5% py-20 grid grid-cols-2 gap-4 place-items-center bg-brand-white">
                 <div>
                     <h1 className="text-15 text-brand-dark font-700">Show Them <br />
                     Don’t Just Tell</h1>
-                    <p className="text-5 font-400 text-brand-dark max-w-">Help your friends and loved ones by creating and sending videos on how to get things done on a website.</p>
+                    <p className="text-4.5 font-400 text-brand-dark max-w-90%">Help your friends and loved ones by creating and sending videos on how to get things done on a website.</p>
                     <button className="p-3 bg-brand-blue text-brand-white text-4 border border-brand-blue border-solid border-1 outline-none rounded-1.5 mt-4 flex items-center justify-center cursor-pointer hover-shadow-brand-blue shadow-md transition-all transition-1">Install HelpMeOut <span className="i-mdi-arrow-right-thin inline-block text-5 ml-2"/></button>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
