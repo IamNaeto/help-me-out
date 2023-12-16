@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Main = () => {
     return ( 
         <main className="bg-brand-grey relative top-20 z-1">
-            <section className="px-5% pt-10 pb-20 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center bg-brand-white">
+            <section className="px-5% pt-7 pb-20 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center bg-brand-white">
                 <div className="flex flex-col items-center md:items-start justify-center justify-start text-center md:text-left">
                     <h1 className="text-10 xs:text-15 text-brand-dark font-700">Show Them <br />
                     Don’t Just Tell</h1>
@@ -23,7 +23,7 @@ const Main = () => {
                     </div>
                     <div className="relative">
                         <img src="./img/Frame3.png" alt="" className="w-full relative z-2"/>
-                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-5 md:left-10 lg:left-12 top--6 md:top--10 w-full"/>
+                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-4 md:left-10 lg:left-12 top--6 md:top--10 w-full"/>
                     </div>
                 </div>
             </section>
