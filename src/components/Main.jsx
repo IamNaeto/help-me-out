@@ -6,7 +6,7 @@ const Main = () => {
         <main className="bg-brand-grey relative top-20 z-1">
             <section className="px-5% pt-10 pb-20 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center bg-brand-white">
                 <div className="flex flex-col items-center md:items-start justify-center justify-start text-center md:text-left">
-                    <h1 className="text-15 text-brand-dark font-700">Show Them <br />
+                    <h1 className="text-10 xs:text-15 text-brand-dark font-700">Show Them <br />
                     Don’t Just Tell</h1>
                     <p className="text-4.5 font-400 text-brand-dark max-w-90%">Help your friends and loved ones by creating and sending videos on how to get things done on a website.</p>
                     <Link to="/Auth" className="p-3 bg-brand-blue text-brand-white text-4 border border-brand-blue border-solid border-1 outline-none rounded-1.5 mt-4 flex items-center justify-center cursor-pointer hover-shadow-brand-blue shadow-md transition-all transition-1 decoration-none">Install HelpMeOut <span className="i-mdi-arrow-right-thin inline-block text-5 ml-2"/></Link>
@@ -23,7 +23,7 @@ const Main = () => {
                     </div>
                     <div className="relative">
                         <img src="./img/Frame3.png" alt="" className="w-full relative z-2"/>
-                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-6 md:left-10 lg:left-12 top--6 md:top--10 w-full"/>
+                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-5 md:left-10 lg:left-12 top--6 md:top--10 w-full"/>
                     </div>
                 </div>
             </section>

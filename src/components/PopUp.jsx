@@ -23,7 +23,7 @@ const PopUp = ({ onClose }) => {
         <div className="flex flex-col items-center justify-center text-center">
           <p>Would you need to view this video later? Save it to your account now!</p>
           <button className="py-3 px-4 bg-brand-blue text-brand-white text-4 rounded-md border-solid border-brand-blue outline-none my-4 cursor-pointer">Save Video</button>
-          <p className="text-brand-litedark text-3.5 xs:text-5">Don’t have an account? <Link to="/Auth" className="text-brand-blue">Create account</Link></p>
+          <p className="text-brand-litedark text-3 xs:text-5">Don’t have an account? <Link to="/Auth" className="text-brand-blue">Create account</Link></p>
         </div>
       </section>
     </main>

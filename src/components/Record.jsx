@@ -34,17 +34,17 @@ const Record = () => {
                 <div  className="w-98% w-95% flex items-center justify-between relative p-3 bg-brand-grey rounded-md border-none outline-none">
                         
                         <p className="text-2.4 lg:text-3">https://www.helpmeout/Untitled_Video_20232509</p>
-                        <div className="text-3 xs:text-3.5 flex items-center gap-2 border-solid border-brand-dark border-1.5 rounded-md p-1 cursor-pointer">
+                        <div className="text-2.4 xs:text-3.5 flex items-center gap-2 border-solid border-brand-dark border-1.5 rounded-md p-1 cursor-pointer">
                             <span className="i-mdi-content-copy inline-block"/>
                             <p>Copy URL</p>
                         </div>
                 </div>
                 <div className="py-8">
                     <p className="font-600 text-3.5">Share your video</p>
-                    <div className="py-2 flex items-center gap-4 mt-2">
-                        <button  className="py-2 px-2 xl:px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Facebook svg.png" className="w-4 mr-2"/> Facebook </button>
-                        <button  className="py-2 px-2 xl:px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Whatsapp.png" className="w-3 mr-2"/> Whatsapp </button>
-                        <button  className="py-2 px-2 xl:px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Telegram.png" className="w-4 mr-2"/> Telegram</button>
+                    <div className="py-2 flex flex-wrap items-center gap-4 mt-2">
+                        <button  className="py-2 px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Facebook svg.png" className="w-4 mr-2"/> Facebook </button>
+                        <button  className="py-2 px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Whatsapp.png" className="w-3 mr-2"/> Whatsapp </button>
+                        <button  className="py-2 px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Telegram.png" className="w-4 mr-2"/> Telegram</button>
                     </div>
                 </div>
             </section>
