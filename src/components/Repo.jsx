@@ -4,30 +4,30 @@ import { Link } from "react-router-dom"
 const Repo = () => {
     return ( 
         <main className="w-full relative top-20 px-5% py-4">
-            <section className="flex items-center gap-2 mb-5 [&>a]:text-brand-dark [&>a]:text-4 [&>a]:text-4">
+            <section className="flex items-center gap-1  md:gap-2 mb-5 [&>a]:text-brand-dark [&>a]:text-2 sm:[&>a]:text-3 md:[&>a]:text-4">
                 <a href="" className="hover-text-brand-blue hover-font-600 transition- decoration-none">Home /</a>
                 <a href="" className="hover-text-brand-blue hover-font-600 transition-all decoration-none">Recent Videos /</a>
                 <a href="" className="text-brand-blue font-600 decoration-none">How To Create A Facebook Ad Listing </a>
             </section>
 
             <section className="w-full">
-                <div className="flex items-center text-center gap-2 mb-5">
+                <div className="flex items-center text-3 md:text-5 text-center gap-2 mb-5">
                     <h3>How To Create A Facebook Ad Listing </h3>
                     <span className="i-mdi-square-edit-outline inline-block text-5 cursor-pointer" />
                 </div>
 
-                <div className="w-full h-100 border-brand-grey border-solid border-2 rounded-5 p-4 mb-5">
+                <div className="w-full h-auto md:h-100 border-brand-grey border-solid border-2 rounded-5 p-4 mb-5">
                     <img src="./img/videorepoframe.png" alt="" className="w-full h-full"/>
                 </div>
 
-                <div className="flex items-center justify-between">
-                    <div className="w-40% relative">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="w-full md:w-40% relative">
                     <input type="email" className="relative py-4 pl-4 pr-10 bg-brand-grey rounded-md border-none outline-none w-full"/> 
                     <Link to="/RecordReady" className="absolute right-3 top-2 decoration-none p-2 rounded-md bg-#605C84 border-none outline-none text-4 text-brand-white cursor-pointer">Send</Link>
                     </div>
 
-                    <div  className="w-45% flex items-center justify-between relative p2 bg-brand-grey rounded-md border-none outline-none">
-                        <p className="text-3">https://www.helpmeout/Untitled_Video_20232509</p>
+                    <div  className="w-full md:w-45% flex items-center justify-between relative p2 bg-brand-grey rounded-md border-none outline-none">
+                        <p className="text-2.4 xs:text-3">https://www.helpmeout/Untitled_Video_20232509</p>
                         <div className="text-3.5 flex items-center gap-2 border-solid border-brand-dark border-1.5 rounded-md p-1 cursor-pointer">
                             <span className="i-mdi-content-copy inline-block"/>
                             <p>Copy URL</p>

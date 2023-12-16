@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import  { Link } from 'react-router-dom'
+import PopUp from './PopUp';
 
 const Record = () => {
     const [isSectionVisible, setIsSectionVisible] = useState(false);
@@ -16,24 +17,24 @@ const Record = () => {
 
     return (
        <main>
-        <section className="w-full grid grid-cols-2 gap-4 relative top-10 px-5% py-8%">
-            <section className="border-r-brand-litegrey border-r-solid border-r-1 pr-4">
+        <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 relative top-10 px-5% py-20">
+            <section className="border-r-brand-litegrey border-r-solid border-r-1 pr-0 xs:pr-1 lg:pr-4">
                 <h1>Your video is ready!</h1>
                 <p className="text-3.5 mt-4 mb-3 text-brand-litedark">Name</p>
                 <div className="flex items-center text-center text-brand-blue  text-5 font-600 gap-2 mb-5">
                     <p>Untitled_Video_20232509</p>
                     <span className="i-mdi-square-edit-outline inline-block text-5 cursor-pointer ml-4" />
                 </div>
-                <div className="w-95% relative mb-5">
+                <div className="w-98% w-95% relative mb-5">
                     <input type="email" placeholder="enter email of receiver" className="relative py-4 pl-4 pr-10 bg-brand-grey rounded-md border-none outline-none w-full"/> 
                     <button className="absolute right-3 top-2 decoration-none p-2 rounded-md bg-#605C84 border-none outline-none text-4 text-brand-white cursor-pointer" onClick={showSection}>Send</button>
                 </div>
 
                 <p className="font-600 mb-2">Video Url</p>
-                <div  className="w-95% flex items-center justify-between relative p-3 bg-brand-grey rounded-md border-none outline-none">
+                <div  className="w-98% w-95% flex items-center justify-between relative p-3 bg-brand-grey rounded-md border-none outline-none">
                         
-                        <p className="text-3">https://www.helpmeout/Untitled_Video_20232509</p>
-                        <div className="text-3.5 flex items-center gap-2 border-solid border-brand-dark border-1.5 rounded-md p-1 cursor-pointer">
+                        <p className="text-2.4 lg:text-3">https://www.helpmeout/Untitled_Video_20232509</p>
+                        <div className="text-3 xs:text-3.5 flex items-center gap-2 border-solid border-brand-dark border-1.5 rounded-md p-1 cursor-pointer">
                             <span className="i-mdi-content-copy inline-block"/>
                             <p>Copy URL</p>
                         </div>
@@ -41,14 +42,14 @@ const Record = () => {
                 <div className="py-8">
                     <p className="font-600 text-3.5">Share your video</p>
                     <div className="py-2 flex items-center gap-4 mt-2">
-                        <button  className="py-2 px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Facebook svg.png" className="w-4 mr-2"/> Facebook </button>
-                        <button  className="py-2 px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Whatsapp.png" className="w-3 mr-2"/> Whatsapp </button>
-                        <button  className="py-2 px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Telegram.png" className="w-4 mr-2"/> Telegram</button>
+                        <button  className="py-2 px-2 xl:px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Facebook svg.png" className="w-4 mr-2"/> Facebook </button>
+                        <button  className="py-2 px-2 xl:px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Whatsapp.png" className="w-3 mr-2"/> Whatsapp </button>
+                        <button  className="py-2 px-2 xl:px-3 border-brand-dark border-1 border-solid outline-none rounded-md bg-brand-white flex items-center cursor-pointer"> <img src="./img/Telegram.png" className="w-4 mr-2"/> Telegram</button>
                     </div>
                 </div>
             </section>
 
-            <section className="pl-4">
+            <section className="pl-0 xs-pl-2 lg:pl-4">
                 <div>
                     <div className="h-80 w-full%">
                         <img src="./img/video.png" alt="" className="h-full w-full"/>
@@ -100,25 +101,7 @@ const Record = () => {
                 <h3 className="text-brand-litedark">Don’t have an account? <Link to="/Auth" className="text-brand-blue">Create account</Link> </h3>
         </section>
         {isSectionVisible && (
-        <section className="absolute top-30 left-30% w-30% bg-#F2F4F7 p-3% mb-10 rounded-md shadow-md shadow-brand-litedark">
-
-            <div className="flex items-end justify-end"> 
-                <span className="closebtn py-1 px-2.5 rounded-20 border-solid border-1.5 border-brand-litedark cursor-pointer" onClick={hideSection}>x</span>
-            </div>
-
-            <div className="mb-20 flex flex-col items-center justify-center text-center">
-                <div className="w-full grid grid-cols-1 place-items-center justify-center">
-                    <img src="./img/success-kite.png" alt="" className="w-60% mx-auto"/>
-                </div>
-                <p>Your video link has been sent to <span className="color-brand-blue font-bold">johnmark@gmail.com</span></p>
-            </div>
-
-            <div className="flex flex-col items-center justify-center text-center">
-                <p>Would you need to view this video later? Save to your account now!</p>
-                <button className="py-3 px-4 decoration-none  bg-brand-blue text-brand-white text-4 rounded-md border-solid border-brand-blue outline-none my-8 cursor-pointer">Save Video</button>
-                <p className="text-brand-litedark">Don’t have an account? <Link to="/Auth" className="text-brand-blue">Create account</Link> </p>
-            </div>
-        </section>
+            <PopUp onClose={hideSection}/>
         )}
     </main>
      );

@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const AllRepo = () => {
     return ( 
         <main className="w-full relative top-20 py-4">
-            <section className="flex items-center justify-between mx-5%">
+            <section className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between mx-5%">
                 <div>
                     <h1 className="text-8 text-brand-dark text-center">Hello, John Mark</h1>
                     <p className="text-4 text-brand-litedark">Here are your recorded videos</p>
                 </div>
 
-                <div className="w-30% relative">
+                <div className="w-full md:w-50% lg:w-40% xl:w-30% relative mt-5 md:mt-0">
                     <input type="Search" placeholder="Search for a particular video" className="relative py-4 px-8 bg-brand-grey rounded-md border-none outline-none w-full"/>
                     <span className="i-mdi-magnify inline-block absolute left-2 top-3 text-5 text-brand-litedark"/>
                 </div>
@@ -19,7 +19,7 @@ const AllRepo = () => {
             <section className="mt-10 border-t-solid border-t-brand-grey border-t-2">
                 <p className="text-5 text-brand-litedark mb-4 mx-5% mt-5">Recent Files</p>
 
-                <div className="grid grid-cols-2 gap-4 justify-center mx-5%">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center mx-5%">
                     <Link to="/VideoRepo" className="decoration-none text-brand-dark border-solid border-brand-grey rounded-lg p-5">
                         <div>
                             <img src="./img/video frame.png" alt="" className="w-full"/>
@@ -59,7 +59,7 @@ const AllRepo = () => {
             <section className="my-10">
                 <p className="text-5 text-brand-litedark mb-4 mx-5%">Files from last week</p>
 
-                <div className="grid grid-cols-2 gap-4 justify-center mx-5%">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center mx-5%">
                     <Link to="/VideoRepo" className="decoration-none text-brand-dark border-solid border-brand-grey rounded-lg p-5">
                         <div>
                             <img src="./img/video frame (2).png" alt="" className="w-full"/>

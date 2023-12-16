@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const GetStarted = () => {
   return (
     <main className="relative top-10 w-full flex items-center justify-center pt-10">
-      <section className="grid grid-cols-1 place-items-center gap-2 w-30%">
+      <section className="grid grid-cols-1 place-items-center gap-2 w-90% sm:w-65% md:w-55% lg:w-45% xl:w-30%">
         <h1 className="text-8 text-brand-dark text-center">Log in or Sign up</h1>
         <p className="text-4 text-center text-brand-litedark mb-4 w-80%">Join millions of others in sharing successful moves on HelpMeOut.</p>
         <button className="w-full p-2.5 border border-1 outline-none rounded-md bg-brand-white text-3.5 font-600 flex items-center justify-center cursor-pointer"> <img src="./img/Google svg.png" alt=""  className="mr-2 w-5"/>Continue with Google</button>

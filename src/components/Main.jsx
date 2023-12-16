@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
     return ( 
         <main className="bg-brand-grey relative top-20 z-1">
-            <section className="px-5% py-20 grid grid-cols-2 gap-4 place-items-center bg-brand-white">
-                <div>
+            <section className="px-5% pt-10 pb-20 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center bg-brand-white">
+                <div className="flex flex-col items-center md:items-start justify-center justify-start text-center md:text-left">
                     <h1 className="text-15 text-brand-dark font-700">Show Them <br />
                     Don’t Just Tell</h1>
                     <p className="text-4.5 font-400 text-brand-dark max-w-90%">Help your friends and loved ones by creating and sending videos on how to get things done on a website.</p>
-                    <button className="p-3 bg-brand-blue text-brand-white text-4 border border-brand-blue border-solid border-1 outline-none rounded-1.5 mt-4 flex items-center justify-center cursor-pointer hover-shadow-brand-blue shadow-md transition-all transition-1">Install HelpMeOut <span className="i-mdi-arrow-right-thin inline-block text-5 ml-2"/></button>
+                    <Link to="/Auth" className="p-3 bg-brand-blue text-brand-white text-4 border border-brand-blue border-solid border-1 outline-none rounded-1.5 mt-4 flex items-center justify-center cursor-pointer hover-shadow-brand-blue shadow-md transition-all transition-1 decoration-none">Install HelpMeOut <span className="i-mdi-arrow-right-thin inline-block text-5 ml-2"/></Link>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4 mt-10 md-mt-0">
                     <div className="flex flex-col items-center justify-between">
                         <div className="relative">
                             <img src="./img/Frame1.png" alt="" className="w-full"/>
@@ -22,7 +23,7 @@ const Main = () => {
                     </div>
                     <div className="relative">
                         <img src="./img/Frame3.png" alt="" className="w-full relative z-2"/>
-                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-14 top--10 w-full"/>
+                        <img src="./img/grid2.png" alt="" className="absolute z-0 left-6 md:left-10 lg:left-12 top--6 md:top--10 w-full"/>
                     </div>
                 </div>
             </section>
@@ -31,32 +32,32 @@ const Main = () => {
                 <h1 className="text-8 text-brand-dark text-center mt-10 mb-2">Features</h1>
                 <p className="text-4.5 text-center text-brand-litedark mb-8">Key Highlights of Our Extension</p>
 
-                <div className="grid grid-cols-2 gap-4 pb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pb-10">
                     <div>
                         <div className="flex items-start gap-4">
                             <img src="./img/Icon placeholder.png" alt="" />
                             <div className="mb-8">
                                 <h2 className="text-6 text-brand-bluedark mb-2">Simple Screen Recording</h2>
-                                <p className="text-4.5 text-brand-litedark max-w-75%">Effortless screen recording for everyone. Record with ease, no tech expertise required.</p>
+                                <p className="text-4.5 text-brand-litedark max-w-95% md:max-w-75%">Effortless screen recording for everyone. Record with ease, no tech expertise required.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
                             <img src="./img/Icon placeholder (1).png" alt="" />
                             <div className="mb-8">
                                 <h2 className="text-6 text-brand-bluedark mb-2">Easy-to-Share URL</h2>
-                                <p className="text-4.5 text-brand-litedark max-w-75%">Share your recordings instantly with a single link. No attachments, no downloads.</p>
+                                <p className="text-4.5 text-brand-litedark max-w-95% md:max-w-75%">Share your recordings instantly with a single link. No attachments, no downloads.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
                             <img src="./img/Icon placeholder (2).png" alt="" />
                             <div>
                                 <h2 className="text-6 text-brand-bluedark">Revisit Recordings</h2>
-                                <p className="text-4.5 text-brand-litedark max-w-75%">Access and review your past content effortlessly. Your recordings, always at your fingertips.</p>
+                                <p className="text-4.5 text-brand-litedark max-w-95% md:max-w-75%">Access and review your past content effortlessly. Your recordings, always at your fingertips.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div>
+                    <div className="mt-10 md:mt-0">
                         <img src="./img/Video Repository.png" alt=""  className="w-full h-full"/>
                     </div>
                 </div>
@@ -65,7 +66,7 @@ const Main = () => {
             <section className="bg-brand-white px-5% py-15 my-8" id="HowItWorks">
                 <h1 className="text-8 text-brand-dark text-center mt-10 mb-8">How it works</h1>
 
-                <div className="grid grid-cols-3 place-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 place-items-center">
                     <div className="text-center p-4">
                         <span className="text-7 text-center bg-brand-blue text-brand-white py-1 px-4 rounded-100%">1</span>
                         <h2 className="text-6 text-brand-bluedark mt-4">Record Screen</h2>
